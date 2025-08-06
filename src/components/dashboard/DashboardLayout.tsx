@@ -1,5 +1,7 @@
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { Skeleton } from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 import { Suspense, lazy } from "react";
 
 // Lazy load components for better performance
@@ -37,9 +39,17 @@ const TopNavSkeleton = () => (
 );
 
 export function DashboardLayout({ children }: DashboardLayoutProps) {
+  const { theme } = useTheme();
+
   return (
     <SidebarProvider defaultOpen={true}> {/* Changed to true for desktop visibility */}
-      <div className="min-h-screen flex w-full bg-gradient-to-br from-amber-100/15 via-amber-100 to-stone-100">
+      <div className={cn(
+        "min-h-screen flex w-full transition-all duration-300",
+        // Light mode gradient
+        "bg-gradient-to-br from-amber-100 via-amber-100/60 to-stone-100",
+        // Dark mode gradient
+        "dark:bg-gradient-to-br dark:from-amber-100/15 dark:via-amber-100 dark:to-stone-100"
+      )}>
         {/* Desktop Sidebar - Always visible on desktop */}
         <div className="hidden md:block"> {/* Wrapper to ensure visibility */}
           <Suspense fallback={<SidebarSkeleton />}>
