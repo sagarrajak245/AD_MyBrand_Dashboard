@@ -64,14 +64,14 @@ const Analytics = () => {
       <div className="space-y-8">
         {/* Header */}
         <div className="animate-fade-in-up">
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-stone-900 to-amber-500 bg-clip-text text-transparent dark:from-amber-500 dark:to-warm-cream mb-2">Detailed Analytics</h1>
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-stone-900 to-amber-500 bg-clip-text text-transparent dark:text-gradient">Detailed Analytics</h1>
           <p className="text-stone-500 font-semibold dark:text-amber-100/80">
             Deep dive into your performance metrics and user behavior
           </p>
         </div>
 
         {/* Filter Dropdown */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-silver  gap-4">
           <div></div>
           <div className="w-full sm:w-56 relative z-50">
             <Select value={selectedRange} onValueChange={setSelectedRange}>
@@ -115,7 +115,7 @@ const Analytics = () => {
                 </div>
                 <div className="flex items-center justify-between p-4 glass-light rounded-lg">
                   <div>
-                    <p className="text-sm text-light-gray">Pages per Session</p> 
+                    <p className="text-sm text-light-gray">Pages per Session</p>
                     <p className="text-2xl font-bold text-charcoal">3.4</p>
                   </div>
                   <div className="text-warm-cream text-sm">+8.7%</div>
