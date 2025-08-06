@@ -5,9 +5,7 @@ A modern, visually stunning analytics dashboard built for digital marketing agen
 ## 🌟 Live Demo
 **🔗 [View Live Demo](https://admybranddashboard-mu.vercel.app/)**
 
-*Experience the full functionality of ADmyBRAND Insights deployed on Vercel*
 
-![ADmyBRAND Insights Dashboard](https://via.placeholder.com/1200x600/0f172a/ffffff?text=ADmyBRAND+Insights+Dashboard)
 
 ## ✨ Comprehensive Features
 
@@ -35,6 +33,7 @@ A modern, visually stunning analytics dashboard built for digital marketing agen
 - **✨ Glassmorphism Effects** - Modern frosted glass aesthetics with:
   - Advanced backdrop blur implementations
   - Layered transparency effects
+  - Light mode Dark mode switch
   - Dynamic glass card components
 - **🎭 Advanced Z-Index Management** - Professional layering system for:
   - Modal overlays and dialogs
@@ -488,25 +487,6 @@ test('renders metrics card with correct data', () => {
 });
 ```
 
-## 🔮 Roadmap & Future Enhancements
-
-### Short Term (Next 2-4 weeks)
-- [ ] **Real API Integration** - Connect to live data sources
-- [ ] **Advanced Filtering** - Complex filter builders
-- [ ] **User Authentication** - OAuth and JWT implementation
-- [ ] **Mobile App** - React Native companion app
-
-### Medium Term (1-3 months)
-- [ ] **AI-Powered Insights** - Machine learning recommendations
-- [ ] **Advanced Exports** - PowerPoint and Excel formats
-- [ ] **Team Collaboration** - Multi-user workspaces
-- [ ] **Custom Dashboards** - Drag-and-drop dashboard builder
-
-### Long Term (3-6 months)
-- [ ] **White Label Solution** - Customizable branding
-- [ ] **API Platform** - Developer API with SDKs
-- [ ] **Enterprise Features** - SSO, audit logs, compliance
-- [ ] **Global Deployment** - Multi-region CDN
 
 ## 📈 Usage Analytics
 
@@ -622,39 +602,12 @@ await exportToJSON(fullDataset, {
 - **Secure Uploads**: File validation and sanitization
 - **HTTPS Everywhere**: All connections encrypted
 
-### Privacy Policy
-- **No Tracking**: No analytics or tracking cookies
-- **Local Storage**: User preferences stored locally
-- **Open Source**: Full transparency of code
-- **GDPR Compliant**: Respects user privacy rights
-
-## 🌍 Browser Support
-
-### Supported Browsers
-- ✅ **Chrome 90+** (Recommended)
-- ✅ **Firefox 88+**
-- ✅ **Safari 14+**
-- ✅ **Edge 90+**
-- ⚠️ **IE 11** (Limited support)
 
 ### Progressive Enhancement
 - **Core Functionality**: Works without JavaScript
 - **Enhanced Experience**: Full features with modern browsers
 - **Graceful Degradation**: Fallbacks for older browsers
 
-## 📞 Support & Community
-
-### Getting Help
-- 📖 **Documentation**: Comprehensive guides and tutorials
-- 💬 **Discussions**: GitHub Discussions for questions
-- 🐛 **Issues**: Bug reports and feature requests
-- 📧 **Email**: Direct support for urgent issues
-
-### Community
-- 🌟 **Star** the repository to show support
-- 🐦 **Follow** us on Twitter for updates
-- 📺 **Subscribe** to our YouTube channel
-- 💼 **LinkedIn** for professional updates
 
 ## 📊 Project Statistics
 
@@ -665,45 +618,8 @@ await exportToJSON(fullDataset, {
 - **Test Coverage**: 85%+
 - **Performance Score**: 95/100
 
-### Deployment Stats
-- **Build Time**: ~2 minutes
-- **Bundle Size**: 45KB gzipped
-- **CDN Coverage**: Global
-- **Uptime**: 99.9%
 
-## 🏆 Awards & Recognition
 
-- 🥇 **Best UI/UX Design** - React Community Awards 2024
-- 🏆 **Innovation Award** - Modern Web Awards
-- ⭐ **Featured Project** - GitHub Trending
-- 📝 **Blog Features** - CSS-Tricks, Smashing Magazine
 
----
 
-<div align="center">
-  <h3>🚀 <strong>Experience the Future of Analytics</strong> 🚀</h3>
-  <p>
-    <a href="https://admybranddashboard-mu.vercel.app/" target="_blank">
-      <img src="https://img.shields.io/badge/🌐_Live_Demo-Visit_Now-blue?style=for-the-badge&logo=vercel" alt="Live Demo" />
-    </a>
-  </p>
-  <br>
-  <p><strong>Built with ❤️ for digital marketing agencies</strong></p>
-  <p><sub>ADmyBRAND Insights - Transform your data into actionable insights</sub></p>
-  
-  <br>
-  
-  <!-- Badges -->
-  <p>
-    <img src="https://img.shields.io/badge/React-18+-61DAFB?style=flat&logo=react&logoColor=white" alt="React" />
-    <img src="https://img.shields.io/badge/TypeScript-5+-3178C6?style=flat&logo=typescript&logoColor=white" alt="TypeScript" />
-    <img src="https://img.shields.io/badge/Tailwind-3+-38B2AC?style=flat&logo=tailwind-css&logoColor=white" alt="Tailwind" />
-    <img src="https://img.shields.io/badge/Vite-5+-646CFF?style=flat&logo=vite&logoColor=white" alt="Vite" />
-    <img src="https://img.shields.io/badge/Vercel-Deployed-black?style=flat&logo=vercel&logoColor=white" alt="Vercel" />
-  </p>
-  
-  <p>
-    <img src="https://img.shields.io/github/stars/yourusername/admybrand-insights?style=social" alt="GitHub Stars" />
-    <img src="https://img.shields.io/github/forks/yourusername/admybrand-insights?style=social" alt="GitHub Forks" />
-  </p>
-</div>
+
