@@ -73,12 +73,12 @@ const Reports = () => {
                     <CardTitle className="text-lg font-semibold text-charcoal mb-2">
                       {report.title}
                     </CardTitle>
-                    <p className="text-sm text-light-gray">{report.description}</p>
+                    <p className="text-sm stroke-stone-400">{report.description}</p>
                   </div>
                   <Badge
                     className={`${report.status === 'Ready'
-                      ? 'bg-warm-cream/20 text-warm-cream border-warm-cream/30'
-                      : 'bg-light-gray/20 text-light-gray border-light-gray/30'
+                      ? 'bg-warm-cream/10 text-amber-300 border-silver-200'
+                      : 'bg-green-200/20 text-green-400 border-silver-200'
                       } backdrop-blur-sm`}
                   >
                     {report.status}
@@ -87,7 +87,7 @@ const Reports = () => {
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-sm text-light-gray">
+                  <div className="text-sm text-silver-200 dark:text-stone-500">
                     <p>Generated: {report.date}</p>
                     <p>Format: {report.type}</p>
                   </div>
