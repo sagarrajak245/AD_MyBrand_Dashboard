@@ -283,7 +283,7 @@ export default function Performance() {
               <CardContent>
                 <div className="h-64 flex items-center justify-center text-light-gray">
                   <div className="text-center">
-                    <TrendingUp className="w-12 h-12 mx-auto mb-2 text-silver opacity-50" />
+                    <TrendingUp className="w-12 h-12 mx-auto mb-2 text-charcoal opacity-0" />
                     <p>Advanced performance analytics coming soon</p>
                     <p className="text-xs mt-1 opacity-75">
                       Currently showing data for {getPeriodLabel(selectedPeriod).toLowerCase()}
