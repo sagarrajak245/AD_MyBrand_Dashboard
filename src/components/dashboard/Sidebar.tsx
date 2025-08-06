@@ -95,10 +95,10 @@ export const Sidebar = memo(() => {
       )}
     >
       <div className={cn(
-        "h-full flex flex-col",
+        "h-full flex flex-col glass-light",
         "bg-gradient-to-b from-amber-100/80 to-pure-white/20",
         "dark:bg-gradient-to-b dark:from-light-silver/80 dark:to-pure-white/15",
-        "backdrop-blur-md"
+        "backdrop-blur-lg border border-light-gray/30"
       )}>
         {/* Header */}
         <SidebarHeader className="p-4 border-b border-light-gray">

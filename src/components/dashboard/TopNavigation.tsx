@@ -12,7 +12,7 @@ export function TopNavigation() {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
 
   return (
-    <header className="glass-nav h-16 px-4 md:px-6 flex items-center justify-between border-b border-light-gray/20 z-navigation sticky top-0">
+    <header className="glass-nav h-16 px-4 md:px-6 flex items-center justify-between border-b border-light-gray/60 z-navigation sticky top-0">
       <div className="flex items-center gap-4">
         {/* Mobile/Desktop Sidebar Trigger */}
         <SidebarTrigger className={cn(
