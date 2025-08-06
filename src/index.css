@@ -7,20 +7,20 @@
     /* ADmyBRAND Analytics Design System */
     --background: 0 0% 98%;
     --foreground: 210 11% 13%;
-    
+
     /* Core Brand Colors */
     --charcoal: 210 11% 13%;
     --pure-white: 0 0% 100%;
     --light-gray: 0 0% 74%;
     --light-silver: 0 0% 93%;
     --warm-cream: 39 100% 84%;
-    
+
     /* Glass System */
     --glass-light: 0 0% 93% / 0.1;
     --glass-dark: 210 11% 13% / 0.15;
     --glass-accent: 39 100% 84% / 0.2;
     --glass-border: 0 0% 74% / 0.3;
-    
+
     /* Semantic Colors */
     --primary: 39 100% 84%;
     --primary-foreground: 210 11% 13%;
@@ -28,24 +28,24 @@
     --secondary-foreground: 210 11% 13%;
     --accent: 39 100% 84%;
     --accent-foreground: 210 11% 13%;
-    
+
     --card: 0 0% 100%;
     --card-foreground: 210 11% 13%;
     --popover: 0 0% 100%;
     --popover-foreground: 210 11% 13%;
-    
+
     --muted: 0 0% 93%;
     --muted-foreground: 0 0% 74%;
-    
+
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    
+
     --border: 0 0% 74% / 0.3;
     --input: 0 0% 93%;
     --ring: 39 100% 84%;
-    
+
     --radius: 1rem;
-    
+
     /* Z-Index System */
     --z-background: 0;
     --z-content: 10;
@@ -75,20 +75,20 @@
     /* Dark Mode Colors */
     --background: 210 11% 8%;
     --foreground: 0 0% 98%;
-    
+
     /* Core Brand Colors - Dark Variants */
     --charcoal: 0 0% 98%;
     --pure-white: 210 11% 8%;
     --light-gray: 0 0% 50%;
     --light-silver: 210 11% 15%;
     --warm-cream: 39 85% 75%;
-    
+
     /* Glass System - Dark */
     --glass-light: 210 11% 15% / 0.2;
     --glass-dark: 0 0% 0% / 0.3;
     --glass-accent: 39 85% 75% / 0.15;
     --glass-border: 0 0% 50% / 0.2;
-    
+
     /* Semantic Colors - Dark */
     --primary: 39 85% 75%;
     --primary-foreground: 210 11% 8%;
@@ -96,22 +96,22 @@
     --secondary-foreground: 0 0% 98%;
     --accent: 39 85% 75%;
     --accent-foreground: 210 11% 8%;
-    
+
     --card: 210 11% 15%;
     --card-foreground: 0 0% 98%;
     --popover: 210 11% 15%;
     --popover-foreground: 0 0% 98%;
-    
+
     --muted: 210 11% 15%;
     --muted-foreground: 0 0% 50%;
-    
+
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 98%;
-    
+
     --border: 0 0% 50% / 0.2;
     --input: 210 11% 15%;
     --ring: 39 85% 75%;
-    
+
     --sidebar-background: 210 11% 10%;
     --sidebar-foreground: 0 0% 98%;
     --sidebar-primary: 39 85% 75%;
@@ -130,81 +130,195 @@
 
   body {
     @apply bg-background text-foreground overflow-x-hidden;
-    background: linear-gradient(135deg, 
-      hsl(var(--background)) 0%, 
-      hsl(var(--muted)) 100%
-    );
+    background: linear-gradient(135deg,
+        hsl(var(--background)) 0%,
+        hsl(var(--muted)) 100%);
     min-height: 100vh;
   }
 }
 
 @layer components {
+
   /* Glassmorphism Components */
   .glass {
     backdrop-filter: blur(20px);
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
-  
+
   .glass-light {
     backdrop-filter: blur(24px);
     background: hsl(var(--light-silver) / 0.1);
     border: 1px solid hsl(var(--light-gray) / 0.3);
   }
-  
+
   .glass-accent {
     backdrop-filter: blur(16px);
     background: hsl(var(--warm-cream) / 0.2);
     border: 1px solid hsl(var(--warm-cream) / 0.3);
   }
-  
+
   .glass-card {
-    @apply glass-light rounded-2xl shadow-[0_8px_32px_rgba(33,33,33,0.12),0_2px_16px_rgba(33,33,33,0.08)] 
-           hover:shadow-[0_16px_48px_rgba(33,33,33,0.16),0_4px_24px_rgba(33,33,33,0.12)]
-           transition-all duration-300 hover:-translate-y-1;
+    @apply glass-light rounded-2xl transition-all duration-300;
+    box-shadow: 0 8px 32px rgba(33, 33, 33, 0.12), 0 2px 16px rgba(33, 33, 33, 0.08);
+    transform: translateY(0);
   }
-  
+
+  .glass-card:hover {
+    box-shadow: 0 16px 48px rgba(33, 33, 33, 0.16), 0 4px 24px rgba(33, 33, 33, 0.12);
+    transform: translateY(-4px);
+  }
+
   .glass-nav {
     backdrop-filter: blur(20px);
     background: rgba(255, 255, 255, 0.12);
     border-bottom: 1px solid hsl(var(--light-gray) / 0.15);
     box-shadow: 0 2px 16px rgba(33, 33, 33, 0.1);
   }
-  
+
   /* Z-Index Utilities */
-  .z-background { z-index: var(--z-background); }
-  .z-content { z-index: var(--z-content); }
-  .z-floating { z-index: var(--z-floating); }
-  .z-navigation { z-index: var(--z-navigation); }
-  .z-modal { z-index: var(--z-modal); }
-  .z-toast { z-index: var(--z-toast); }
-  
+  .z-background {
+    z-index: var(--z-background);
+  }
+
+  .z-content {
+    z-index: var(--z-content);
+  }
+
+  .z-floating {
+    z-index: var(--z-floating);
+  }
+
+  .z-navigation {
+    z-index: var(--z-navigation);
+  }
+
+  .z-modal {
+    z-index: var(--z-modal);
+  }
+
+  .z-toast {
+    z-index: var(--z-toast);
+  }
+
   /* Custom Brand Colors */
-  .text-charcoal { color: hsl(var(--charcoal)); }
-  .text-warm-cream { color: hsl(var(--warm-cream)); }
-  .text-light-gray { color: hsl(var(--light-gray)); }
-  .text-light-silver { color: hsl(var(--light-silver)); }
-  
-  .bg-charcoal { background-color: hsl(var(--charcoal)); }
-  .bg-warm-cream { background-color: hsl(var(--warm-cream)); }
-  .bg-light-gray { background-color: hsl(var(--light-gray)); }
-  .bg-light-silver { background-color: hsl(var(--light-silver)); }
-  
+  .text-charcoal {
+    color: hsl(var(--charcoal));
+  }
+
+  .text-warm-cream {
+    color: hsl(var(--warm-cream));
+  }
+
+  .text-light-gray {
+    color: hsl(var(--light-gray));
+  }
+
+  .text-light-silver {
+    color: hsl(var(--light-silver));
+  }
+
+  .bg-charcoal {
+    background-color: hsl(var(--charcoal));
+  }
+
+  .bg-warm-cream {
+    background-color: hsl(var(--warm-cream));
+  }
+
+  .bg-light-gray {
+    background-color: hsl(var(--light-gray));
+  }
+
+  .bg-light-silver {
+    background-color: hsl(var(--light-silver));
+  }
+
   /* Animation Classes */
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
-  
+
   .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
   }
-  
+
   .animate-scale-in {
     animation: scaleIn 0.4s ease-out forwards;
   }
-  
+
   .animate-glass-glow {
     animation: glassGlow 2s ease-in-out infinite alternate;
+  }
+
+  /* Sidebar specific fixes */
+  .sidebar-visible {
+    display: flex !important;
+  }
+
+  /* Force sidebar visibility on desktop */
+  @media (min-width: 768px) {
+    [data-sidebar="sidebar"] {
+      display: flex !important;
+      position: relative !important;
+    }
+  }
+
+  /* Mobile search improvements */
+  .mobile-search-focused {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    border-color: hsl(var(--warm-cream)) !important;
+    color: hsl(var(--charcoal)) !important;
+  }
+
+  .mobile-search-focused::placeholder {
+    color: hsl(var(--light-gray)) !important;
+    opacity: 0.8 !important;
+  }
+
+  /* Better input focus states */
+  input:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px hsl(var(--warm-cream) / 0.2) !important;
+  }
+
+  /* Sidebar button improvements */
+  button[data-sidebar="trigger"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Touch improvements for mobile */
+  @media (max-width: 767px) {
+
+    button,
+    input,
+    [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    input {
+      font-size: 16px;
+      /* Prevents zoom on iOS */
+    }
+  }
+
+  /* Sidebar rail visibility fix */
+  [data-sidebar="rail"] {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  [data-sidebar="sidebar"]:hover [data-sidebar="rail"] {
+    opacity: 1;
+  }
+
+  /* Loading skeleton improvements */
+  .skeleton-pulse {
+    animation: skeleton-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 }
 
@@ -212,18 +326,47 @@
   .text-gradient {
     @apply bg-gradient-to-r from-charcoal to-warm-cream bg-clip-text text-transparent;
   }
-  
+
   .border-gradient {
-    border-image: linear-gradient(135deg, 
-      hsl(var(--warm-cream)), 
-      hsl(var(--light-gray))
-    ) 1;
+    border-image: linear-gradient(135deg,
+        hsl(var(--warm-cream)),
+        hsl(var(--light-gray))) 1;
+  }
+
+  /* Sidebar state utilities */
+  .sidebar-expanded {
+    width: 256px;
+  }
+
+  .sidebar-collapsed {
+    width: 64px;
+  }
+
+  /* Mobile-first responsive utilities */
+  .mobile-hidden {
+    @apply hidden sm:block;
+  }
+
+  .mobile-only {
+    @apply block sm:hidden;
+  }
+
+  /* Focus ring improvements */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-warm-cream/20 focus:border-warm-cream/50;
   }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(1deg); }
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
 }
 
 @keyframes fadeInUp {
@@ -231,6 +374,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -242,6 +386,7 @@
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -252,7 +397,20 @@
   from {
     box-shadow: 0 0 20px hsl(var(--warm-cream) / 0.3);
   }
+
   to {
     box-shadow: 0 0 40px hsl(var(--warm-cream) / 0.6);
+  }
+}
+
+@keyframes skeleton-pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
   }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
 
 export default {
@@ -24,14 +25,14 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				
+
 				/* Brand Colors */
 				charcoal: 'hsl(var(--charcoal))',
 				'pure-white': 'hsl(var(--pure-white))',
 				'light-gray': 'hsl(var(--light-gray))',
 				'light-silver': 'hsl(var(--light-silver))',
 				'warm-cream': 'hsl(var(--warm-cream))',
-				
+
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
