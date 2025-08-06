@@ -274,9 +274,9 @@ export default function Performance() {
 
         <div className="grid gap-6 lg:grid-cols-3">
           <div className="glass-card lg:col-span-2">
-            <Card className="border-0 bg-transparent shadow-none">
+            <Card className="border-1 bg-transparent shadow-none">
               <CardHeader>
-                <CardTitle className="text-charcoal">
+                <CardTitle className="text-silver  dark: text-stone-500">
                   Performance Trend Analysis - {getPeriodLabel(selectedPeriod)}
                 </CardTitle>
               </CardHeader>
