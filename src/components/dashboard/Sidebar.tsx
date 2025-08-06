@@ -48,27 +48,23 @@ const SidebarItem = memo(({ icon: Icon, label, href, isActive }: SidebarItemProp
         tooltip={isCollapsed ? label : undefined}
         className={cn(
           "group relative transition-all duration-200 ease-in-out rounded-lg",
-          "hover:glass-accent hover:text-charcoal",
-          "focus-visible:glass-accent focus-visible:text-charcoal",
-          "text-charcoal/80 hover:text-charcoal",
-          isActive && [
-            "glass-accent text-charcoal font-medium",
-            "shadow-lg shadow-warm-cream/20",
-            "border-l-3 border-warm-cream"
-          ]
+          isActive
+            ? "glass-accent text-charcoal font-medium shadow-lg shadow-warm-cream/20 border-l-3 border-warm-cream"
+            : "hover:bg-amber-200/50 dark:hover:bg-amber-400/20 focus-visible:bg-amber-200/60 dark:focus-visible:bg-amber-400/30 hover:text-amber-500 focus-visible:text-amber-500 text-charcoal/80",
         )}
       >
         <Link to={href} className="flex items-center gap-3 w-full">
           <Icon className={cn(
             "w-5 h-5 transition-colors duration-200",
-            isActive ? "text-warm-cream" : "text-charcoal/70",
-            "group-hover:text-warm-cream"
+            isActive
+              ? "text-amber-500"
+              : "text-charcoal/70 hover:text-amber-500 focus-visible:text-amber-500"
           )} />
           <span className={cn(
-            "transition-all duration-200",
-            isActive ? "text-charcoal font-medium" : "text-charcoal/80",
-            "group-hover:text-charcoal",
-            "truncate"
+            "transition-all duration-200 truncate",
+            isActive
+              ? "text-charcoal font-medium"
+              : "text-charcoal/80 hover:text-amber-500 focus-visible:text-amber-500"
           )}>
             {label}
           </span>
@@ -86,7 +82,7 @@ export const Sidebar = memo(() => {
 
   return (
     <SidebarRoot
-      variant="sidebar" // Changed from floating to sidebar
+      variant="sidebar"
       side="left"
       className={cn(
         "transition-all duration-300 ease-in-out",
@@ -100,11 +96,12 @@ export const Sidebar = memo(() => {
     >
       <div className={cn(
         "h-full flex flex-col",
-        "bg-gradient-to-b from-light-silver/50 to-pure-white/80",
+        "bg-gradient-to-b from-amber-100/80 to-pure-white/20",
+        "dark:bg-gradient-to-b dark:from-light-silver/80 dark:to-pure-white/15",
         "backdrop-blur-md"
       )}>
         {/* Header */}
-        <SidebarHeader className="p-4 border-b border-light-gray/20">
+        <SidebarHeader className="p-4 border-b border-light-gray">
           <div className="flex items-center gap-3">
             <div className={cn(
               "w-8 h-8 rounded-lg flex items-center justify-center",
@@ -112,7 +109,7 @@ export const Sidebar = memo(() => {
               "shadow-md shadow-warm-cream/30"
             )}>
               <img
-                src="../assets/web_logo.svg"
+                src="/web_logo.svg"
                 alt="Logo"
                 className="w-6 h-6 object-cover rounded-full"
               />
@@ -120,8 +117,8 @@ export const Sidebar = memo(() => {
             </div>
             {state !== "collapsed" && (
               <div className="flex flex-col">
-                <span className="text-charcoal font-semibold text-lg leading-none">
-                  Ad_MyBand
+                <span className="font-bold text-lg leading-tight bg-gradient-to-r from-stone-700 to-warm-cream bg-clip-text text-transparent dark:from-amber-500 dark:to-warm-cream">
+                  AD_MyBand
                 </span>
                 <span className="text-light-gray text-xs">
                   Community Platform
@@ -154,7 +151,7 @@ export const Sidebar = memo(() => {
               "border border-warm-cream/30"
             )}>
               <p className="text-charcoal text-sm font-medium">
-                See your all details...
+                See all your details...
               </p>
               <p className="text-light-gray text-xs mt-1">
                 Grow your company with our insights
