@@ -96,7 +96,7 @@ export const Sidebar = memo(() => {
     >
       <div className={cn(
         "h-full flex flex-col glass-light",
-        "bg-gradient-to-b from-amber-100/80 to-pure-white/20",
+        "bg-gradient-to-b from-amber-200/80 to-pure-white/10",
         "dark:bg-gradient-to-b dark:from-light-silver/80 dark:to-pure-white/15",
         "backdrop-blur-lg border border-light-gray/30"
       )}>
@@ -117,8 +117,8 @@ export const Sidebar = memo(() => {
             </div>
             {state !== "collapsed" && (
               <div className="flex flex-col">
-                <span className="font-bold text-lg leading-tight bg-gradient-to-r from-stone-700 to-warm-cream bg-clip-text text-transparent dark:from-amber-500 dark:to-warm-cream">
-                  AD_MyBand
+                <span className="font-bold text-lg leading-tight bg-gradient-to-r from-stone-700 to-amber-200 bg-clip-text text-transparent">
+                  AD_MyBrand
                 </span>
                 <span className="text-light-gray text-xs">
                   Community Platform

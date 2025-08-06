@@ -25,7 +25,7 @@ export function TopNavigation() {
 
         {/* Brand Title - Hidden on small screens when search is focused */}
         <div className={cn(
-          "text-lg md:text-xl font-bold text-gradient transition-all duration-200",
+          "text-lg md:text-xl font-bold bg-gradient-to-r from-stone-800 to-amber-300 bg-clip-text text-transparent dark:text-gradient",
           isSearchFocused && "hidden sm:block"
         )}>
           ADmyBRAND Insights
@@ -47,7 +47,7 @@ export function TopNavigation() {
             className={cn(
               "pl-10 glass-light border-light-gray/30 transition-all duration-200",
               "text-charcoal placeholder:text-light-gray",
-              "focus:border-warm-cream/50 focus:glass-accent",
+              "focus:border-warm-cream/80 focus:glass-accent",
               "focus:text-charcoal focus:placeholder:text-light-gray/70",
               // Mobile specific improvements
               "text-base md:text-sm", // Larger text on mobile
@@ -75,7 +75,7 @@ export function TopNavigation() {
             "w-9 h-9 md:w-10 md:h-10 rounded-lg transition-all duration-200",
             "border border-light-gray/30 hover:border-warm-cream/50",
             "bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm",
-            "hover:bg-warm-cream/20 dark:hover:bg-warm-cream/10",
+            "hover:bg-amber-200 dark:hover:bg-warm-cream",
             "shadow-sm hover:shadow-md"
           )}
         >
@@ -95,7 +95,7 @@ export function TopNavigation() {
             "w-9 h-9 md:w-10 md:h-10 rounded-lg transition-all duration-200 relative",
             "border border-light-gray/30 hover:border-warm-cream/50",
             "bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm",
-            "hover:bg-warm-cream/20 dark:hover:bg-warm-cream/10",
+            "hover:bg-amber-200 dark:hover:bg-warm-cream",
             "shadow-sm hover:shadow-md"
           )}
         >
@@ -119,7 +119,7 @@ export function TopNavigation() {
             "hidden md:flex w-9 h-9 md:w-10 md:h-10 rounded-lg transition-all duration-200",
             "border border-light-gray/30 hover:border-warm-cream/50",
             "bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm",
-            "hover:bg-warm-cream/20 dark:hover:bg-warm-cream/10",
+            "hover:bg-amber-200 dark:hover:bg-warm-cream",
             "shadow-sm hover:shadow-md"
           )}
         >
@@ -135,7 +135,7 @@ export function TopNavigation() {
             "w-9 h-9 md:w-10 md:h-10 rounded-lg transition-all duration-200",
             "border border-light-gray/30 hover:border-warm-cream/50",
             "bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm",
-            "hover:bg-warm-cream/20 dark:hover:bg-warm-cream/10",
+            "hover:bg-amber-200 dark:hover:bg-warm-cream",
             "shadow-sm hover:shadow-md"
           )}
         >
@@ -153,7 +153,7 @@ export function TopNavigation() {
             "sm:hidden w-9 h-9 rounded-lg transition-all duration-200 ml-2",
             "border border-light-gray/30 hover:border-warm-cream/50",
             "bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm",
-            "hover:bg-warm-cream/20 dark:hover:bg-warm-cream/10",
+            "hover:bg-amber-200 dark:hover:bg-warm-cream",
             "shadow-sm hover:shadow-md"
           )}
           onClick={() => setIsSearchFocused(false)}

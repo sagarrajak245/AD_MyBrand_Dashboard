@@ -1,12 +1,12 @@
-import { DollarSign, Users, Target, TrendingUp, Calendar, Filter } from "lucide-react";
-import { DashboardLayout } from "@/components/dashboard/DashboardLayout";
-import { MetricsCard } from "@/components/dashboard/MetricsCard";
-import { RevenueChart } from "@/components/charts/RevenueChart";
 import { ChannelPerformanceChart } from "@/components/charts/ChannelPerformanceChart";
+import { RevenueChart } from "@/components/charts/RevenueChart";
 import { TrafficSourcesChart } from "@/components/charts/TrafficSourcesChart";
 import { CampaignTable } from "@/components/dashboard/CampaignTable";
-import { Button } from "@/components/ui/button";
+import { DashboardLayout } from "@/components/dashboard/DashboardLayout";
+import { MetricsCard } from "@/components/dashboard/MetricsCard";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Calendar, DollarSign, Filter, Target, TrendingUp, Users } from "lucide-react";
 
 const Index = () => {
   return (
@@ -16,7 +16,7 @@ const Index = () => {
         <div className="flex items-center justify-between animate-fade-in-up">
           <div>
             <h1 className="text-3xl font-bold text-gradient mb-2">Analytics Overview</h1>
-            <p className="text-light-gray">
+            <p className="text-stone-500  font-semibold  dark:text-amber-100/80">
               Track your marketing performance and campaign insights
             </p>
           </div>
