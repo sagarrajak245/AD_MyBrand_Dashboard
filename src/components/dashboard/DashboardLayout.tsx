@@ -46,9 +46,9 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       <div className={cn(
         "min-h-screen flex w-full transition-all duration-300",
         // Light mode gradient
-        "bg-gradient-to-br from-amber-200/70 via-amber-100 to-stone-100",
+        "bg-gradient-to-br from-amber-200/50 via-amber-100 to-stone-100",
         // Dark mode gradient
-        "dark:bg-gradient-to-br dark:from-amber-100/20 dark:via-amber-200 dark:to-stone-100"
+        "dark:bg-gradient-to-br dark:from-amber-100/25 dark:via-amber-200/90 dark:to-stone-100"
       )}>
         {/* Desktop Sidebar - Always visible on desktop */}
         <div className="hidden md:block"> {/* Wrapper to ensure visibility */}
