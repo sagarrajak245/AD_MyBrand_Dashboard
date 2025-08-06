@@ -231,7 +231,7 @@ export default function Performance() {
         <div className="glass-card  p-6">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-xl font-semibold text-charcoal">Key Performance Indicators</h2>
-            <span className="text-sm text-light-gray font-medium">
+            <span className="text-sm text-silver-200 dark:stone-500 font-medium">
               Period: {getPeriodLabel(selectedPeriod)}
             </span>
           </div>
@@ -244,7 +244,7 @@ export default function Performance() {
                 </div>
                 <Progress value={kpi.value} className="h-2" />
                 <div className="flex justify-between items-center text-xs">
-                  <span className="text-stone-500">Target: {kpi.target}%</span>
+                  <span className=" text-silver-200 dark:text-stone-600">Target: {kpi.target}%</span>
                   {kpi.value >= kpi.target ? (
                     <span className="flex items-center text-green-500">
                       <TrendingUp className="w-3 h-3 mr-1" />
