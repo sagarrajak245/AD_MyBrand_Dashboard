@@ -96,7 +96,7 @@ export const Sidebar = memo(() => {
     >
       <div className={cn(
         "h-full flex flex-col glass-light",
-        "bg-gradient-to-b from-amber-200/80 to-pure-white/10",
+        "bg-gradient-to-b from-amber-100 to-pure-white/10",
         "dark:bg-gradient-to-b dark:from-light-silver/80 dark:to-pure-white/15",
         "backdrop-blur-lg border border-light-gray/30"
       )}>
@@ -120,9 +120,7 @@ export const Sidebar = memo(() => {
                 <span className="font-bold text-lg leading-tight bg-gradient-to-r from-stone-700 to-amber-200 bg-clip-text text-transparent">
                   AD_MyBrand
                 </span>
-                <span className="text-light-gray text-xs">
-                  Community Platform
-                </span>
+
               </div>
             )}
           </div>

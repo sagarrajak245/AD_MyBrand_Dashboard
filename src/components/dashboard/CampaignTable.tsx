@@ -133,11 +133,11 @@ export function CampaignTable() {
   const getStatusColor = (status: Campaign['status']) => {
     switch (status) {
       case 'Active':
-        return 'bg-warm-cream/10 text-amber-200 border-amber-200';
+        return 'bg-warm-cream/10 text-amber-300 border-amber-200';
       case 'Paused':
-        return 'bg-light-gray-100/30 text-silver-200 border-light-gray-100';
+        return 'bg-light-gray/30 text-silver-300 border-light-gray-200';
       case 'Completed':
-        return 'bg-green-200/10 text-green-300 border-green-100';
+        return 'bg-green-200/10 text-green-500 border-green-100';
       default:
         return 'bg-light-gray-100/20 text-light-gray-200 border-light-gray/30';
     }
@@ -399,7 +399,7 @@ export function CampaignTable() {
                     </div>
                     <div>
                       <p className="text-sm text-light-gray">ROI</p>
-                      <p className="text-stone-500 font-medium">{campaign.roi}x</p>
+                      <p className="text-charcoal font-medium">{campaign.roi}x</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -442,12 +442,12 @@ export function CampaignTable() {
                         {campaign.status}
                       </Badge>
                     </TableCell>
-                    <TableCell className="text-light-gray">{campaign.channel}</TableCell>
+                    <TableCell className="text-silver-300">{campaign.channel}</TableCell>
                     <TableCell className="text-charcoal">${campaign.budget.toLocaleString()}</TableCell>
                     <TableCell className="text-charcoal">${campaign.spend.toLocaleString()}</TableCell>
                     <TableCell className="text-charcoal">{campaign.ctr}%</TableCell>
                     <TableCell className="text-charcoal">{campaign.conversions}</TableCell>
-                    <TableCell className="text-warm-cream font-medium">{campaign.roi}x</TableCell>
+                    <TableCell className="text-green-500 font-medium">{campaign.roi}x</TableCell>
                     <TableCell>
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>

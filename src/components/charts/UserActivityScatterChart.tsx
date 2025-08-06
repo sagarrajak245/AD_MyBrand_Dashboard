@@ -86,7 +86,7 @@ export function UserActivityScatterChart() {
                                                     {entry.name}: {entry.value?.toLocaleString?.()} users
                                                 </p>
                                             ))}
-                                            <p className="text-sm text-warm-cream font-medium">
+                                            <p className="text-sm text-amber-300 font-medium">
                                                 Engagement: {payload[0]?.payload?.x?.toFixed(1)}
                                             </p>
                                         </div>
