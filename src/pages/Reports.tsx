@@ -1,8 +1,8 @@
-import { FileText, Download, Calendar, Filter } from "lucide-react";
 import { DashboardLayout } from "@/components/dashboard/DashboardLayout";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Calendar, Download, FileText, Filter } from "lucide-react";
 
 const Reports = () => {
   const reports = [
@@ -42,8 +42,8 @@ const Reports = () => {
         {/* Header */}
         <div className="flex items-center justify-between animate-fade-in-up">
           <div>
-            <h1 className="text-3xl font-bold text-gradient mb-2">Reports</h1>
-            <p className="text-light-gray">
+            <h1 className="text-3xl font-bold text-stone-700 dark:text-gradient mb-2">Reports</h1>
+            <p className="text-stone-500  font-semibold  dark:text-amber-100/80">
               Generate and download comprehensive analytics reports
             </p>
           </div>
@@ -62,8 +62,8 @@ const Reports = () => {
         {/* Reports Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reports.map((report, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="glass-card animate-scale-in hover:animate-float group"
               style={{ animationDelay: `${index * 150}ms` }}
             >
@@ -75,12 +75,11 @@ const Reports = () => {
                     </CardTitle>
                     <p className="text-sm text-light-gray">{report.description}</p>
                   </div>
-                  <Badge 
-                    className={`${
-                      report.status === 'Ready' 
-                        ? 'bg-warm-cream/20 text-warm-cream border-warm-cream/30' 
-                        : 'bg-light-gray/20 text-light-gray border-light-gray/30'
-                    } backdrop-blur-sm`}
+                  <Badge
+                    className={`${report.status === 'Ready'
+                      ? 'bg-warm-cream/20 text-warm-cream border-warm-cream/30'
+                      : 'bg-light-gray/20 text-light-gray border-light-gray/30'
+                      } backdrop-blur-sm`}
                   >
                     {report.status}
                   </Badge>
@@ -97,17 +96,17 @@ const Reports = () => {
                   </div>
                 </div>
                 <div className="flex gap-2">
-                  <Button 
-                    className="flex-1 glass-light hover:glass-accent" 
+                  <Button
+                    className="flex-1 glass-light hover:glass-accent"
                     size="sm"
                     disabled={report.status !== 'Ready'}
                   >
                     <Download className="h-4 w-4 mr-2" />
                     Download
                   </Button>
-                  <Button 
-                    variant="outline" 
-                    className="glass-light hover:glass-accent border-light-gray/30" 
+                  <Button
+                    variant="outline"
+                    className="glass-light hover:glass-accent border-light-gray/30"
                     size="sm"
                   >
                     <Filter className="h-4 w-4" />

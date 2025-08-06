@@ -1,13 +1,13 @@
+import { ChannelPerformanceChart } from "@/components/charts/ChannelPerformanceChart";
+import { RevenueChart } from "@/components/charts/RevenueChart";
+import { TrafficSourcesChart } from "@/components/charts/TrafficSourcesChart";
 import { DashboardLayout } from "@/components/dashboard/DashboardLayout";
 import { MetricsCard } from "@/components/dashboard/MetricsCard";
-import { RevenueChart } from "@/components/charts/RevenueChart";
-import { ChannelPerformanceChart } from "@/components/charts/ChannelPerformanceChart";
-import { TrafficSourcesChart } from "@/components/charts/TrafficSourcesChart";
 import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { TrendingUp, TrendingDown, Calendar, Download, BarChart3, Star, Zap, Target } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { BarChart3, Calendar, Download, Star, Target, TrendingDown, TrendingUp, Zap } from "lucide-react";
 
 export default function Performance() {
   const performanceMetrics = [
@@ -54,8 +54,8 @@ export default function Performance() {
         {/* Header */}
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-charcoal">Performance Analytics</h1>
-            <p className="text-light-gray mt-1">Deep dive into campaign performance metrics</p>
+            <h1 className="text-3xl font-bold text-stone-700 dark:text-gradient">Performance Analytics</h1>
+            <p className="text-stone-500  font-semibold  dark:text-amber-100/80 mt-1">Deep dive into campaign performance metrics</p>
           </div>
           <div className="flex gap-3">
             <Select>
@@ -80,7 +80,7 @@ export default function Performance() {
         {/* Performance Metrics */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {performanceMetrics.map((metric, index) => (
-            <div 
+            <div
               key={metric.title}
               className="animate-scale-in"
               style={{ animationDelay: `${index * 100}ms` }}

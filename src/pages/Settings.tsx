@@ -1,15 +1,15 @@
 import { DashboardLayout } from "@/components/dashboard/DashboardLayout";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
+import { Switch } from "@/components/ui/switch";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useTheme } from "@/hooks/useTheme";
-import { User, Bell, Shield, Palette, Database, Download, Save } from "lucide-react";
+import { Bell, Database, Download, Palette, Save, Shield, User } from "lucide-react";
 
 export default function Settings() {
   const { theme, toggleTheme } = useTheme();
@@ -19,8 +19,8 @@ export default function Settings() {
       <div className="space-y-8 animate-fade-in-up max-w-4xl">
         {/* Header */}
         <div>
-          <h1 className="text-3xl font-bold text-charcoal">Settings</h1>
-          <p className="text-light-gray mt-1">Manage your account and application preferences</p>
+          <h1 className="text-3xl font-bold text-stone-700 dark:text-gradient">Settings</h1>
+          <p className="text-stone-500  font-semibold  dark:text-amber-100/80 mt-1">Manage your account and application preferences</p>
         </div>
 
         <Tabs defaultValue="profile" className="space-y-6">
@@ -54,7 +54,7 @@ export default function Settings() {
                     <p className="text-sm text-light-gray">JPG, PNG or GIF (max. 5MB)</p>
                   </div>
                 </div>
-                
+
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="space-y-2">
                     <Label htmlFor="firstName">First Name</Label>
@@ -104,9 +104,9 @@ export default function Settings() {
                     </div>
                     <Switch defaultChecked />
                   </div>
-                  
+
                   <Separator />
-                  
+
                   <div className="flex items-center justify-between">
                     <div>
                       <Label className="text-base">Campaign Alerts</Label>
@@ -114,7 +114,7 @@ export default function Settings() {
                     </div>
                     <Switch defaultChecked />
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <div>
                       <Label className="text-base">Weekly Reports</Label>
@@ -122,7 +122,7 @@ export default function Settings() {
                     </div>
                     <Switch />
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <div>
                       <Label className="text-base">Budget Warnings</Label>
@@ -153,14 +153,14 @@ export default function Settings() {
                       <Label className="text-base">Dark Mode</Label>
                       <p className="text-sm text-light-gray">Switch between light and dark themes</p>
                     </div>
-                    <Switch 
-                      checked={theme === 'dark'} 
+                    <Switch
+                      checked={theme === 'dark'}
                       onCheckedChange={toggleTheme}
                     />
                   </div>
-                  
+
                   <Separator />
-                  
+
                   <div className="space-y-2">
                     <Label>Language</Label>
                     <Select defaultValue="en">
@@ -175,7 +175,7 @@ export default function Settings() {
                       </SelectContent>
                     </Select>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label>Timezone</Label>
                     <Select defaultValue="utc">
@@ -216,9 +216,9 @@ export default function Settings() {
                       <Input type="password" placeholder="Confirm new password" className="glass-light border-0" />
                     </div>
                   </div>
-                  
+
                   <Separator />
-                  
+
                   <div className="flex items-center justify-between">
                     <div>
                       <Label className="text-base">Two-Factor Authentication</Label>
@@ -226,7 +226,7 @@ export default function Settings() {
                     </div>
                     <Button variant="outline" className="glass-light">Enable</Button>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <div>
                       <Label className="text-base">Login Notifications</Label>
@@ -235,7 +235,7 @@ export default function Settings() {
                     <Switch defaultChecked />
                   </div>
                 </div>
-                
+
                 <Button className="glass-accent">Update Security Settings</Button>
               </CardContent>
             </Card>
@@ -272,9 +272,9 @@ export default function Settings() {
                       </Button>
                     </div>
                   </div>
-                  
+
                   <Separator />
-                  
+
                   <div className="space-y-2">
                     <Label>Data Retention</Label>
                     <Select defaultValue="1year">

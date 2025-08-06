@@ -1,11 +1,11 @@
+import { CampaignTable } from "@/components/dashboard/CampaignTable";
 import { DashboardLayout } from "@/components/dashboard/DashboardLayout";
 import { MetricsCard } from "@/components/dashboard/MetricsCard";
-import { CampaignTable } from "@/components/dashboard/CampaignTable";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
-import { Plus, Search, Filter, Download, Target, DollarSign, MousePointer, BarChart3 } from "lucide-react";
+import { BarChart3, DollarSign, Download, Filter, MousePointer, Plus, Search, Target } from "lucide-react";
 
 export default function Campaigns() {
   const campaignMetrics = [
@@ -45,8 +45,8 @@ export default function Campaigns() {
         {/* Header */}
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-charcoal">Campaign Management</h1>
-            <p className="text-light-gray mt-1">Monitor and optimize your advertising campaigns</p>
+            <h1 className="text-3xl font-bold text-stone-700 dark:text-gradient mb-2">Campaign Management</h1>
+            <p className="text-stone-500  font-semibold  dark:text-amber-100/80 mt-1">Monitor and optimize your advertising campaigns</p>
           </div>
           <div className="flex gap-3">
             <Button variant="outline" className="glass-light">
@@ -63,7 +63,7 @@ export default function Campaigns() {
         {/* Metrics Cards */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {campaignMetrics.map((metric, index) => (
-            <div 
+            <div
               key={metric.title}
               className="animate-scale-in"
               style={{ animationDelay: `${index * 100}ms` }}
