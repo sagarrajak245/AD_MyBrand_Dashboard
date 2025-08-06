@@ -1,5 +1,5 @@
 import { DashboardLayout } from "@/components/dashboard/DashboardLayout";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ProfileEditor } from "@/components/dashboard/ProfileEditor";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -9,10 +9,14 @@ import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useTheme } from "@/hooks/useTheme";
-import { Bell, Database, Download, Palette, Save, Shield, User } from "lucide-react";
+import { Bell, Database, Download, Palette, Shield, User } from "lucide-react";
+import { useSearchParams } from "react-router-dom";
 
 export default function Settings() {
   const { theme, toggleTheme } = useTheme();
+  const [searchParams] = useSearchParams();
+  const tab = searchParams.get("tab") || "profile";
+
 
   return (
     <DashboardLayout>
@@ -23,7 +27,7 @@ export default function Settings() {
           <p className="text-stone-500  font-semibold  dark:text-amber-100/80 mt-1">Manage your account and application preferences</p>
         </div>
 
-        <Tabs defaultValue="profile" className="space-y-6">
+        <Tabs value={tab} className="space-y-6">
           <TabsList className="glass-light border-0">
             <TabsTrigger value="profile">Profile</TabsTrigger>
             <TabsTrigger value="notifications">Notifications</TabsTrigger>
@@ -44,45 +48,11 @@ export default function Settings() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="flex items-center gap-6">
-                  <Avatar className="w-20 h-20">
-                    <AvatarImage src="/api/placeholder/80/80" />
-                    <AvatarFallback className="text-xl">AB</AvatarFallback>
-                  </Avatar>
-                  <div className="space-y-2">
-                    <Button variant="outline" className="glass-light">Upload Photo</Button>
-                    <p className="text-sm text-light-gray">JPG, PNG or GIF (max. 5MB)</p>
-                  </div>
-                </div>
-
-                <div className="grid gap-4 md:grid-cols-2">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName">First Name</Label>
-                    <Input id="firstName" defaultValue="Alex" className="glass-light border-0" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="lastName">Last Name</Label>
-                    <Input id="lastName" defaultValue="Brand" className="glass-light border-0" />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" defaultValue="alex@admybrand.com" className="glass-light border-0" />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="company">Company</Label>
-                  <Input id="company" defaultValue="ADmyBRAND Analytics" className="glass-light border-0" />
-                </div>
-
-                <Button className="glass-accent">
-                  <Save className="w-4 h-4 mr-2" />
-                  Save Changes
-                </Button>
+                <ProfileEditor />
               </CardContent>
             </Card>
           </TabsContent>
+
 
           <TabsContent value="notifications" className="space-y-6">
             <Card className="glass-card border-0">
@@ -299,3 +269,5 @@ export default function Settings() {
     </DashboardLayout>
   );
 }
+
+

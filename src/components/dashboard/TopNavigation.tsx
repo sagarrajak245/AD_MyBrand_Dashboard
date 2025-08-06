@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Bell, Moon, Search, Settings, Sun, User } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function TopNavigation() {
   const { theme, setTheme } = useTheme();
@@ -88,60 +89,66 @@ export function TopNavigation() {
         </Button>
 
         {/* Notifications */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className={cn(
-            "w-9 h-9 md:w-10 md:h-10 rounded-lg transition-all duration-200 relative",
-            "border border-light-gray/30 hover:border-warm-cream/50",
-            "bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm",
-            "hover:bg-amber-200 dark:hover:bg-warm-cream",
-            "shadow-sm hover:shadow-md"
-          )}
-        >
-          <Bell className="h-4 w-4 text-charcoal dark:text-amber-500" />
-          <Badge className={cn(
-            "absolute -top-1 -right-1 h-5 w-5 rounded-full p-0",
-            "flex items-center justify-center text-xs font-semibold",
-            "bg-orange-500 text-white border-1 border-white dark:border-charcoal",
-            "animate-pulse shadow-sm"
-          )}>
-            3
-          </Badge>
-          <span className="sr-only">Notifications</span>
-        </Button>
+        <Link to="/settings?tab=notifications">
+          <Button
+            variant="ghost"
+            size="icon"
+            className={cn(
+              "w-9 h-9 md:w-10 md:h-10 rounded-lg transition-all duration-200 relative",
+              "border border-light-gray/30 hover:border-warm-cream/50",
+              "bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm",
+              "hover:bg-amber-200 dark:hover:bg-warm-cream",
+              "shadow-sm hover:shadow-md"
+            )}
+          >
+            <Bell className="h-4 w-4 text-charcoal dark:text-amber-500" />
+            <Badge className={cn(
+              "absolute -top-1 -right-1 h-5 w-5 rounded-full p-0",
+              "flex items-center justify-center text-xs font-semibold",
+              "bg-orange-500 text-white border-1 border-white dark:border-charcoal",
+              "animate-pulse shadow-sm"
+            )}>
+              3
+            </Badge>
+            <span className="sr-only">Notifications</span>
+          </Button>
+        </Link>
 
         {/* Settings - Hidden on small screens */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className={cn(
-            "hidden md:flex w-9 h-9 md:w-10 md:h-10 rounded-lg transition-all duration-200",
-            "border border-light-gray/30 hover:border-warm-cream/50",
-            "bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm",
-            "hover:bg-amber-200 dark:hover:bg-warm-cream",
-            "shadow-sm hover:shadow-md"
-          )}
-        >
-          <Settings className="h-4 w-4 text-charcoal dark:text-amber-500" />
-          <span className="sr-only">Settings</span>
-        </Button>
+        <Link to="/settings">
+          <Button
+            variant="ghost"
+            size="icon"
+            className={cn(
+              "hidden md:flex w-9 h-9 md:w-10 md:h-10 rounded-lg transition-all duration-200",
+              "border border-light-gray/30 hover:border-warm-cream/50",
+              "bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm",
+              "hover:bg-amber-200 dark:hover:bg-warm-cream",
+              "shadow-sm hover:shadow-md"
+            )}
+          >
+            <Settings className="h-4 w-4 text-charcoal dark:text-amber-500" />
+            <span className="sr-only">Settings</span>
+          </Button>
+        </Link>
 
         {/* User Profile */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className={cn(
-            "w-9 h-9 md:w-10 md:h-10 rounded-lg transition-all duration-200",
-            "border border-light-gray/30 hover:border-warm-cream/50",
-            "bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm",
-            "hover:bg-amber-200 dark:hover:bg-warm-cream",
-            "shadow-sm hover:shadow-md"
-          )}
-        >
-          <User className="h-4 w-4 text-charcoal dark:text-amber-500" />
-          <span className="sr-only">User menu</span>
-        </Button>
+        <Link to="/settings?tab=profile" >
+          <Button
+            variant="ghost"
+            size="icon"
+            className={cn(
+              "w-9 h-9 md:w-10 md:h-10 rounded-lg transition-all duration-200",
+              "border border-light-gray/30 hover:border-warm-cream/50",
+              "bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm",
+              "hover:bg-amber-200 dark:hover:bg-warm-cream",
+              "shadow-sm hover:shadow-md"
+            )}
+          >
+            <User className="h-4 w-4 text-charcoal dark:text-amber-500" />
+            <span className="sr-only">User menu</span>
+          </Button>
+        </Link>
       </div>
 
       {/* Mobile Search Close Button */}

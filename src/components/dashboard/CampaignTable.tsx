@@ -399,7 +399,7 @@ export function CampaignTable() {
                     </div>
                     <div>
                       <p className="text-sm text-light-gray">ROI</p>
-                      <p className="text-warm-cream font-medium">{campaign.roi}x</p>
+                      <p className="text-stone-500 font-medium">{campaign.roi}x</p>
                     </div>
                   </CardContent>
                 </Card>
