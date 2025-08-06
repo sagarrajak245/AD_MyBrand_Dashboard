@@ -46,7 +46,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       <div className={cn(
         "min-h-screen flex w-full transition-all duration-300",
         // Light mode gradient
-        "bg-gradient-to-br from-amber-200/85 via-amber-100 to-stone-100",
+        "bg-gradient-to-br from-amber-200/70 via-amber-100 to-stone-100",
         // Dark mode gradient
         "dark:bg-gradient-to-br dark:from-amber-100/20 dark:via-amber-200 dark:to-stone-100"
       )}>
