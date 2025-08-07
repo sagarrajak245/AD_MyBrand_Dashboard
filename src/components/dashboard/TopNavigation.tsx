@@ -13,7 +13,7 @@ export function TopNavigation() {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
 
   return (
-    <header className="glass-nav h-16 px-4 md:px-6 flex items-center justify-between border-b border-light-gray/60 z-navigation sticky top-0">
+    <header className="glass-nav h-16 px-4 md:px-6 flex items-center justify-between dark:border-b-stone-500 border-b-stone-300  z-navigation sticky top-0">
       <div className="flex items-center gap-4">
         {/* Mobile/Desktop Sidebar Trigger */}
         <SidebarTrigger className={cn(
@@ -29,7 +29,7 @@ export function TopNavigation() {
           "text-lg md:text-xl font-bold bg-gradient-to-r from-stone-800 to-amber-300 bg-clip-text text-transparent dark:text-gradient",
           isSearchFocused && "hidden sm:block"
         )}>
-          ADmyBRAND Insights
+          AdMyBrand Insights
         </div>
       </div>
 
@@ -154,7 +154,7 @@ export function TopNavigation() {
       {/* Mobile Search Close Button */}
       {isSearchFocused && (
         <Button
-          variant="ghost"
+          variant="default"
           size="icon"
           className={cn(
             "sm:hidden w-9 h-9 rounded-lg transition-all duration-200 ml-2",
@@ -170,4 +170,4 @@ export function TopNavigation() {
       )}
     </header>
   );
-}
+} 

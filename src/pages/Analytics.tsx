@@ -111,21 +111,21 @@ const Analytics = () => {
                     <p className="text-sm text-light-gray">Average Time on Site</p>
                     <p className="text-2xl font-bold text-charcoal">4m 32s</p>
                   </div>
-                  <div className="text-warm-cream text-sm">+12.3%</div>
+                  <div className="text-orange-400 text-sm">+12.3%</div>
                 </div>
                 <div className="flex items-center justify-between p-4 glass-light rounded-lg">
                   <div>
                     <p className="text-sm text-light-gray">Pages per Session</p>
                     <p className="text-2xl font-bold text-charcoal">3.4</p>
                   </div>
-                  <div className="text-warm-cream text-sm">+8.7%</div>
+                  <div className="text-orange-400 text-sm">+8.7%</div>
                 </div>
                 <div className="flex items-center justify-between p-4 glass-light rounded-lg">
                   <div>
                     <p className="text-sm text-light-gray">Return Visitors</p>
                     <p className="text-2xl font-bold text-charcoal">68.2%</p>
                   </div>
-                  <div className="text-warm-cream text-sm">+15.4%</div>
+                  <div className="text-orange-400 text-sm">+15.4%</div>
                 </div>
               </div>
             </CardContent>

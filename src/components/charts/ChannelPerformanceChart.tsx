@@ -64,7 +64,7 @@ export function ChannelPerformanceChart() {
       <CardHeader>
         <CardTitle className="text-lg font-semibold text-charcoal flex items-center gap-2">
           Channel Performance
-          <div className="w-2 h-2 rounded-full bg-warm-cream animate-pulse"></div>
+          <div className="w-2 h-2 rounded-full bg-warm-orange animate-pulse"></div>
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -130,7 +130,7 @@ export function ChannelPerformanceChart() {
                         <p className="text-sm font-medium text-charcoal mb-2">{data.channel}</p>
                         <p className="text-sm text-charcoal">Spend: ${data.spend.toLocaleString()}</p>
                         <p className="text-sm text-charcoal">Conversions: {data.conversions}</p>
-                        <p className="text-sm text-warm-cream font-medium">ROAS: {data.roas}x</p>
+                        <p className="text-sm text-warm-orange font-medium">ROAS: {data.roas}x</p>
                       </div>
                     );
                   }
@@ -139,7 +139,7 @@ export function ChannelPerformanceChart() {
               />
               <Bar
                 dataKey="conversions"
-                fill="hsl(var(--warm-cream))"
+                fill="hsl(var(--warm-orange))"
                 radius={isMobile ? [0, 4, 4, 0] : [4, 4, 0, 0]}
                 className="hover:opacity-80 transition-opacity duration-200"
               />

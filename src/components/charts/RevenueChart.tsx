@@ -133,16 +133,16 @@ export function RevenueChart() {
               <Line
                 type="monotone"
                 dataKey="revenue"
-                stroke="hsl(var(--warm-cream))"
+                stroke="hsl(var(--warm-orange))"
                 strokeWidth={isMobile ? 2 : 3}
                 dot={{
-                  fill: 'hsl(var(--warm-cream))',
+                  fill: 'hsl(var(--warm-orange))',
                   strokeWidth: 2,
                   r: isMobile ? 3 : 4
                 }}
                 activeDot={{
                   r: isMobile ? 5 : 6,
-                  stroke: 'hsl(var(--warm-cream))',
+                  stroke: 'hsl(var(--warm-orange))',
                   strokeWidth: 2
                 }}
                 name="Current Year"

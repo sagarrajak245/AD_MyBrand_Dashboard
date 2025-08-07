@@ -1,8 +1,8 @@
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 
 const data = [
-  { name: 'Organic Search', value: 45, color: 'hsl(var(--warm-cream))' },
+  { name: 'Organic Search', value: 45, color: 'hsl(var(--warm-orange))' },
   { name: 'Direct', value: 25, color: 'hsl(var(--light-gray))' },
   { name: 'Social Media', value: 20, color: 'hsl(var(--charcoal))' },
   { name: 'Referral', value: 10, color: 'hsl(var(--light-silver))' },
@@ -14,7 +14,7 @@ export function TrafficSourcesChart() {
       <CardHeader>
         <CardTitle className="text-lg font-semibold text-charcoal flex items-center gap-2">
           Traffic Sources
-          <div className="w-2 h-2 rounded-full bg-warm-cream animate-pulse"></div>
+          <div className="w-2 h-2 rounded-full bg-warm-orange animate-pulse"></div>
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -30,8 +30,8 @@ export function TrafficSourcesChart() {
               dataKey="value"
             >
               {data.map((entry, index) => (
-                <Cell 
-                  key={`cell-${index}`} 
+                <Cell
+                  key={`cell-${index}`}
                   fill={entry.color}
                   className="hover:opacity-80 transition-opacity duration-200 cursor-pointer"
                 />
@@ -44,7 +44,7 @@ export function TrafficSourcesChart() {
                   return (
                     <div className="glass-light backdrop-blur-md rounded-lg p-4 border border-light-gray/30 shadow-lg">
                       <p className="text-sm font-medium text-charcoal">{data.name}</p>
-                      <p className="text-sm text-warm-cream font-medium">{data.value}%</p>
+                      <p className="text-sm text-warm-orange font-medium">{data.value}%</p>
                     </div>
                   );
                 }
@@ -56,8 +56,8 @@ export function TrafficSourcesChart() {
                 <div className="flex flex-wrap justify-center gap-4 mt-4">
                   {payload?.map((entry, index) => (
                     <div key={index} className="flex items-center gap-2">
-                      <div 
-                        className="w-3 h-3 rounded-full" 
+                      <div
+                        className="w-3 h-3 rounded-full"
                         style={{ backgroundColor: entry.color }}
                       />
                       <span className="text-sm text-charcoal">{entry.value}</span>

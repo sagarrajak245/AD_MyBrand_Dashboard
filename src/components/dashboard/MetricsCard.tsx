@@ -58,8 +58,8 @@ export function MetricsCard({
     <Card className={`glass-card animate-scale-in hover:animate-float group ${className}`}>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle className="text-sm font-medium text-silver-100">{title}</CardTitle>
-        <div className="p-2 rounded-lg glass-accent group-hover:animate-glass-glow">
-          <Icon className="h-4 w-4 text-charcoal" />
+        <div className="p-2 rounded-lg bg-orange-400 glass-accent group-hover:animate-glass-glow">
+          <Icon className="h-4 w-4 text-charcoal  dark: text-stone-600 " />
         </div>
       </CardHeader>
       <CardContent>

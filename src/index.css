@@ -11,9 +11,10 @@
     /* Core Brand Colors */
     --charcoal: 210 11% 13%;
     --pure-white: 0 0% 100%;
-    --light-gray: 0 0% 74%;
+    --light-gray: 0 0% 50%;
     --light-silver: 0 0% 93%;
     --warm-cream: 39 100% 84%;
+    --warm-orange: 32 100% 49%;
 
     /* Glass System */
     --glass-light: 0 0% 93% / 0.1;
@@ -79,8 +80,9 @@
     /* Core Brand Colors - Dark Variants */
     --charcoal: 0 0% 98%;
     --pure-white: 210 11% 8%;
-    --light-gray: 0 0% 50%;
+    --light-gray: 0 0% 75%;
     --light-silver: 210 11% 15%;
+    --warm-orange: 32 100% 49%;
     --warm-cream: 39 85% 75%;
 
     /* Glass System - Dark */
@@ -111,6 +113,7 @@
     --border: 0 0% 50% / 0.2;
     --input: 210 11% 15%;
     --ring: 39 85% 75%;
+
 
     --sidebar-background: 210 11% 10%;
     --sidebar-foreground: 0 0% 98%;

@@ -133,7 +133,7 @@ export function CampaignTable() {
   const getStatusColor = (status: Campaign['status']) => {
     switch (status) {
       case 'Active':
-        return 'bg-warm-cream/10 text-amber-300 border-amber-200';
+        return 'bg-orange-300/10 text-amber-300 border-amber-200';
       case 'Paused':
         return 'bg-light-gray/30 text-silver-300 border-light-gray-200';
       case 'Completed':
@@ -319,7 +319,7 @@ export function CampaignTable() {
               placeholder="Search campaigns..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full md:w-64 glass-light border-light-gray/30 focus:border-warm-cream/50"
+              className="w-full md:w-64 glass-light border-light-gray/30 focus:border-warm-orange/50"
             />
             <ExportButton />
           </div>

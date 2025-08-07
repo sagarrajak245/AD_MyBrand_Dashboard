@@ -39,7 +39,7 @@ export function UserActivityScatterChart() {
             <CardHeader>
                 <CardTitle className="text-lg font-semibold text-charcoal flex items-center gap-2">
                     User Activity Scatter
-                    <div className="w-2 h-2 rounded-full bg-warm-cream animate-pulse"></div>
+                    <div className="w-2 h-2 rounded-full bg-warm-orange animate-pulse"></div>
                 </CardTitle>
             </CardHeader>
             <CardContent>
@@ -107,7 +107,7 @@ export function UserActivityScatterChart() {
                         <Scatter
                             name="Active Users"
                             data={seriesAData}
-                            fill="hsl(var(--warm-cream))"
+                            fill="hsl(var(--warm-orange))"
                             className="hover:opacity-80 transition-opacity duration-200"
                         />
                         <Scatter

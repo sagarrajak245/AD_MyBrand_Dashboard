@@ -101,7 +101,7 @@ export const Sidebar = memo(() => {
         "backdrop-blur-lg border border-light-gray/30"
       )}>
         {/* Header */}
-        <SidebarHeader className="p-4 border-b border-light-gray">
+        <SidebarHeader className="p-4 border-b border-light-gray ">
           <div className="flex items-center gap-3">
             <div className={cn(
               "w-8 h-8 rounded-lg flex items-center justify-center",
@@ -116,10 +116,17 @@ export const Sidebar = memo(() => {
 
             </div>
             {state !== "collapsed" && (
-              <div className="flex flex-col">
+              <div className="flex flex-col items-start">
                 <span className="font-bold text-lg leading-tight bg-gradient-to-r from-stone-700 to-amber-200 bg-clip-text text-transparent">
                   AD_MyBrand
                 </span>
+                <div className={cn(
+                  "h-0.5 bg-gradient-to-r from-warm-cream to-amber-200 rounded-full mt-1",
+                  "transition-all duration-300 ease-in-out",
+                  // Adjust width to perfectly align with top nav
+                  "w-full max-w-[150px]"
+                )} />
+
 
               </div>
             )}
