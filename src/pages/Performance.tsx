@@ -228,7 +228,7 @@ export default function Performance() {
         </div>
 
         {/* KPI Progress Section */}
-        <div className="glass-card  p-6">
+        <div className="glass-card border-stone-300 p-6">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-xl font-semibold text-charcoal">Key Performance Indicators</h2>
             <span className="text-sm text-silver-200 dark:stone-500 font-medium">
@@ -272,20 +272,20 @@ export default function Performance() {
           </div>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-3">
-          <div className="glass-card lg:col-span-2">
-            <Card className="border-1 bg-transparent shadow-none">
+        <div className="grid gap-6 border-transparent shadow-none lg:grid-cols-3">
+          <div className="glass-card  lg:col-span-2">
+            <Card className="border-stone-100 bg-transparent shadow-none">
               <CardHeader>
-                <CardTitle className="text-silver  dark: text-stone-500">
+                <CardTitle className="text-silver  dark: text-stone-700">
                   Performance Trend Analysis - {getPeriodLabel(selectedPeriod)}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="h-64 flex items-center justify-center text-light-gray">
                   <div className="text-center">
-                    <TrendingUp className="w-12 h-12 mx-auto mb-2 text-charcoal opacity-0" />
-                    <p>Advanced performance analytics coming soon</p>
-                    <p className="text-xs mt-1 opacity-75">
+                    <TrendingUp className="w-12 h-12 mx-auto mb-2 text-slate-400 " />
+                    <p className="text-slate-700">Advanced performance analytics coming soon</p>
+                    <p className="text-xs mt-1 text-slate-500">
                       Currently showing data for {getPeriodLabel(selectedPeriod).toLowerCase()}
                     </p>
                   </div>
