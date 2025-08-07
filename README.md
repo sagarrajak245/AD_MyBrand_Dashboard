@@ -5,6 +5,12 @@ A modern, visually stunning analytics dashboard built for digital marketing agen
 ## 🌟 Live Demo
 **🔗 [View Live Demo](https://admybranddashboard-mu.vercel.app/)**
 
+## Light Mode:
+<img width="1900" height="860" alt="image" src="https://github.com/user-attachments/assets/3a446a24-8701-465c-8c96-d0d143cbb9e5" />
+
+## Dark Mode:
+<img width="1919" height="919" alt="image" src="https://github.com/user-attachments/assets/b094ce0d-244e-449a-b677-a719bc65f99d" />
+
 
 
 ## ✨ Comprehensive Features
