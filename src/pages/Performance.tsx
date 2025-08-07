@@ -248,7 +248,7 @@ export default function Performance() {
                   {kpi.value >= kpi.target ? (
                     <span className="flex items-center text-green-500">
                       <TrendingUp className="w-3 h-3 mr-1" />
-                      On track
+                      On track 
                     </span>
                   ) : (
                     <span className="flex items-center text-red-500">

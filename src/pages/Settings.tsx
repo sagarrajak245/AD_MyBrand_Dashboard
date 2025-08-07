@@ -14,9 +14,13 @@ import { useSearchParams } from "react-router-dom";
 
 export default function Settings() {
   const { theme, toggleTheme } = useTheme();
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const tab = searchParams.get("tab") || "profile";
 
+  // Handle tab change
+  const handleTabChange = (newTab) => {
+    setSearchParams({ tab: newTab });
+  };
 
   return (
     <DashboardLayout>
@@ -27,7 +31,7 @@ export default function Settings() {
           <p className="text-stone-500  font-semibold  dark:text-amber-100/80 mt-1">Manage your account and application preferences</p>
         </div>
 
-        <Tabs value={tab} className="space-y-6">
+        <Tabs value={tab} onValueChange={handleTabChange} className="space-y-6">
           <TabsList className="glass-light border-0">
             <TabsTrigger value="profile">Profile</TabsTrigger>
             <TabsTrigger value="notifications">Notifications</TabsTrigger>
@@ -52,7 +56,6 @@ export default function Settings() {
               </CardContent>
             </Card>
           </TabsContent>
-
 
           <TabsContent value="notifications" className="space-y-6">
             <Card className="glass-card border-0">
@@ -269,5 +272,3 @@ export default function Settings() {
     </DashboardLayout>
   );
 }
-
-
