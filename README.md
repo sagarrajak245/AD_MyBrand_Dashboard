@@ -240,14 +240,13 @@ docker run -p 3000:3000 admybrand-insights
 ### 📈 Advanced Dashboard Analytics
 
 #### Real-time Metrics System
-- **Live KPI Updates**: Revenue, conversions, user growth with animated counters
+- ** KPI Updates**: Revenue, conversions, user growth with animated counters
 - **Trend Indicators**: Color-coded arrows and percentage changes
 - **Comparison Views**: Period-over-period analysis
 - **Goal Tracking**: Progress bars and achievement indicators
 
 #### Interactive Chart System
 ```typescript
-// Example: Revenue Chart with real-time updates
 const RevenueChart = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
