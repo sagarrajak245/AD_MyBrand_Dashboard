@@ -36,7 +36,7 @@ A modern, visually stunning analytics dashboard built for digital marketing agen
   - **Column Customization** with show/hide functionality
 - **📈 Campaign Analytics** - Comprehensive campaign tracking and ROI analysis
 - **🎯 Performance Metrics** - Multi-channel attribution and traffic analysis
-- ** AI Bot Assistant
+-  AI Bot Assistant
 
 ### 🎨 Premium UI/UX Design System
 - **✨ Glassmorphism Effects** - Modern frosted glass aesthetics with:
